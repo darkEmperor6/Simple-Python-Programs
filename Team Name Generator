@@ -1,0 +1,11 @@
+end = {"United", "Super Kings", "Knight Riders", "Cavaliers", "Hornets", "Warriors", "Beserkers", "Royals", "Titans", "Thunder", "Heat", "Hotspur", "Blazers", "Raptors", "Dragons"}
+
+print("Welcome to Team Name Generator!!\n")
+town = input("Enter your town: ")
+ending = end.pop()
+
+print(f"Your Team Name: {town} {ending}")
+
+print(end)
+
+
