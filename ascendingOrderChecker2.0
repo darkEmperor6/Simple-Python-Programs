@@ -1,0 +1,24 @@
+k = 6
+order = 1
+
+# Creating an empty list
+num = []
+
+print("Please enter 6 numbers in ascending order.")
+
+# Taking input from user
+for i in range(k):
+    num.append(int(input("Enter a number: ")))
+
+# Displaying numbers stored in the list
+print(num)
+
+# Checking if the numbers are stored in ascending order
+for j in range(1, k):
+    if num[j] < num[j - 1]:
+        order = 0
+        print("Numbers are not stored in ascending order.")
+        break
+
+if order == 1:
+    print("Numbers are stored in ascending order.")
