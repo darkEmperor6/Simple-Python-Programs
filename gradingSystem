@@ -1,0 +1,26 @@
+#Program to input the marks of 5 students for ISE and display the Marks list & display no.of students under the range categories 0-39, 40-59 & 60-100
+i = 0
+k = 5
+marks = []
+
+for i in range(k):
+  marks.append(int(input(f"Enter the marks of student {i+1}: ")))
+  i += 1
+
+A = 0
+B = 0
+W = 0
+
+for i in range(k):
+  if marks[i] >= 0 and marks[i] <= 39:
+    W += 1
+  elif marks[i] >= 40 and marks[i] <= 59:
+    B += 1
+  else:
+    A += 1
+
+print(f"\nMarks: {marks}")
+print("\nMarks Range\t\t\t\tNumber of Students")
+print(F"0-39\t\t\t\t\t{W}")
+print(F"40-59\t\t\t\t\t{B}")
+print(F"60-100\t\t\t\t\t{A}")
