@@ -1,0 +1,10 @@
+import pandas as pd
+
+# Sample Series
+data = {'Name': ['Alice', 'Bob', 'Charlie', 'Alice', 'David'], 'Age' : [ 38, 20, 27, 18, 19] }
+series = pd.DataFrame(data)
+
+unique_names = series['Age'].unique()
+print(unique_names)  # Output: ['Alice' 'Bob' 'Charlie' 'David']
+
+series['Age'] > 20
