@@ -1,0 +1,9 @@
+import pandas as pd
+
+# Sample Series
+data = {'Name': ['Alice', 'Bob', 'Charlie', 'Alice', 'David']}
+series = pd.DataFrame(data)
+
+unique_names = series['Name'].unique()
+print(unique_names)  # Output: ['Alice' 'Bob' 'Charlie' 'David']
+
