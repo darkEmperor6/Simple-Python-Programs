@@ -1,0 +1,13 @@
+import pandas as pd
+
+# Sample Series
+data = {'Name': ['Alice', 'Bob', 'Charlie', 'Alice', 'David'], 'Age' : [ 38, 20, 27, 18, 19] }
+series = pd.DataFrame(data)
+
+unique_names = series['Age'].unique()
+print(unique_names)  # Output: ['Alice' 'Bob' 'Charlie' 'David']
+
+df1 = series[series['Age'] > 20]
+df1
+
+df1.to_excel('C:/Users/HP/Desktop/Python for AI/dark.xlsx')
