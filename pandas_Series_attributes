@@ -1,0 +1,18 @@
+import pandas as pd
+
+players = ['David Warner', 'Virat Kohli', 'Chris Gayle', 'Mitchell Starc']
+
+letters = ['A','B','C','D']
+series = pd.Series(players, index=letters)
+
+#index attribute returns the index (labels) of the Series
+print(series.index)
+
+#values attribute returns Series data as NumPy array
+print(series.values)
+
+#shape attribute returns a tuple of the shape of the underlying data for the given series object
+print(series.shape)
+
+#size attribute returns the number of elements in the underlying data.
+print(series.size)
