@@ -1,0 +1,11 @@
+import pandas as pd
+
+data = [2, 3, 4, 5]
+series = pd.Series(data)
+series
+
+# Applying a lambda function with a condition
+result = series.apply(lambda x: x**2 if x > 2 else x)
+
+print("\nAfter applying lambda function with condition (x**2 if x > 2 else x):")
+print(result)
