@@ -1,0 +1,19 @@
+import pandas as pd
+import numpy as np
+
+# Creating a Pandas Series with some null values
+data = [1, 2, np.nan, 4, np.nan]
+series = pd.Series(data)
+
+# Using isnull() to detect null values
+null_values = series.isnull()
+
+# Using notnull() to detect non-null values
+non_null_values = series.notnull()
+
+print("Original Series:")
+print(series)
+print("\nIs Null:")
+print(null_values)
+print("\nNot Null:")
+print(non_null_values)
