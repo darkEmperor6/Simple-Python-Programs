@@ -1,0 +1,8 @@
+import pandas as pd
+
+data = [2, 3, 4, 5]
+series = pd.Series(data)
+
+print("Squares of each element in data list (if not null):\n")
+result = series.apply(lambda x: x**2 if pd.notnull(x) else x)
+print(result)
