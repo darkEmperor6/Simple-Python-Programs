@@ -1,0 +1,16 @@
+#setting a single column as index
+import pandas as pd
+
+# Sample DataFrame
+data = {
+    'A': ['foo', 'bar', 'baz', 'foo', 'bar'],
+    'B': [1, 2, 3, 4, 5],
+    'C': [10, 20, 30, 40, 50]
+}
+df = pd.DataFrame(data)
+df
+
+# Setting column 'A' as the index
+df1 = df.set_index('A')
+print(df1) #By default (drop=True), the column used as the index will disappear from the DataFrame.
+
