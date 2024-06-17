@@ -1,0 +1,16 @@
+#Setting Index and Dropping the Original Column
+
+import pandas as pd
+
+# Sample DataFrame
+data = {
+    'A': ['foo', 'bar', 'baz', 'foo', 'bar'],
+    'B': [1, 2, 3, 4, 5],
+    'C': [10, 20, 30, 40, 50]
+}
+df = pd.DataFrame(data)
+
+# Setting column 'A' as the index and dropping it from the DataFrame
+df3 = df.set_index('A', drop=True)
+print(df3)
+#same output as default mode where we don't assign drop to true
