@@ -1,0 +1,13 @@
+import pandas as pd
+
+# Sample DataFrame
+data = {
+    'A': ['foo', 'bar', 'baz', 'foo', 'bar'],
+    'B': [1, 2, 3, 4, 5],
+    'C': [10, 20, 30, 40, 50]
+}
+df = pd.DataFrame(data)
+
+# Setting columns 'A' and 'B' as the index
+df2 = df.set_index(['A', 'B'])
+print(df2)
