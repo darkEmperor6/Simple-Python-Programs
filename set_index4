@@ -1,0 +1,15 @@
+#Setting Index and Keeping the Original Column
+import pandas as pd
+
+# Sample DataFrame
+data = {
+    'A': ['foo', 'bar', 'baz', 'foo', 'bar'],
+    'B': [1, 2, 3, 4, 5],
+    'C': [10, 20, 30, 40, 50]
+}
+df = pd.DataFrame(data)
+
+#If you set drop=False, the column will remain in the DataFrame while also being used as the index.
+# Setting column 'A' as the index but keeping it in the DataFrame
+df4 = df.set_index('A', drop=False)
+print(df4)
