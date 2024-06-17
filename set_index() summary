@@ -1,0 +1,43 @@
+#setting a single column as index
+import pandas as pd
+
+# Sample DataFrame
+data = {
+    'A': ['CR7', 'LM10', 'KM9', 'CR7', 'LM10'],
+    'B': [1, 2, 3, 4, 5],
+    'C': [10, 20, 30, 40, 50]
+}
+df = pd.DataFrame(data)
+df
+
+# Setting column 'A' as the index
+df1 = df.set_index('A')
+print(df1) #By default (drop=True), the column used as the index will disappear from the DataFrame.
+
+# Setting columns 'A' and 'B' as the index
+df2 = df.set_index(['A', 'B'])
+print(df2)
+
+# Setting column 'A' as the index and dropping it from the DataFrame
+df3 = df.set_index('A', drop=True)
+print(df3)
+#same output as default mode where we don't assign drop to true
+
+# Setting column 'B' as the index but keeping it in the DataFrame
+df4 = df.set_index('C', drop=False)
+print(df4)
+
+#If you set drop=False, the column will remain in the DataFrame while also being used as the index.
+
+# First, let's create a DataFrame with an existing index
+df5 = df.set_index('A')
+
+# Now, append column 'B' to the existing index
+df5 = df5.set_index('B', append=True)
+print(df5)
+
+# Setting column 'A' as the index and modifying the original DataFrame
+df7 = df.copy()
+df7.set_index('A', inplace=True)
+print(df7)
+
