@@ -1,0 +1,19 @@
+#Appending a New Index to the Existing Index in DataFrame
+import pandas as pd
+
+# Sample DataFrame
+data = {
+    'A': ['foo', 'bar', 'baz', 'foo', 'bar'],
+    'B': [1, 2, 3, 4, 5],
+    'C': [10, 20, 30, 40, 50]
+}
+df = pd.DataFrame(data)
+
+# First, let's create a DataFrame with an existing index
+df5 = df.set_index('A')
+
+# Now, append column 'B' to the existing index
+df5 = df5.set_index('B', append=True)
+print(df5)
+
+
